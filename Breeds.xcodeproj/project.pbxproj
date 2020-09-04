@@ -25,6 +25,8 @@
 		37FE93A924E8754C0075F99E /* BreedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE93A824E8754C0075F99E /* BreedDetailViewController.swift */; };
 		37FE93AC24E8826C0075F99E /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE93AB24E8826C0075F99E /* NibLoadable.swift */; };
 		37FE93AF24E896180075F99E /* NSMutableAttributedString+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE93AE24E896180075F99E /* NSMutableAttributedString+Boilerplate.swift */; };
+		A136B2DA2502908B00D9DC77 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A136B2D92502908B00D9DC77 /* ServiceProtocol.swift */; };
+		A136B2DC2502925F00D9DC77 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A136B2DB2502925F00D9DC77 /* ImageService.swift */; };
 		B2983B49D64C07ABAD4EB011 /* Pods_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16ED894158264549FFF536FF /* Pods_Breeds.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		37FE93AB24E8826C0075F99E /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		37FE93AE24E896180075F99E /* NSMutableAttributedString+Boilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Boilerplate.swift"; sourceTree = "<group>"; };
 		9EFB0DB30FD29FF68C30A243 /* Pods-BreedsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.release.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.release.xcconfig"; sourceTree = "<group>"; };
+		A136B2D92502908B00D9DC77 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		A136B2DB2502925F00D9DC77 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		A77D1D9BB46E9DEF6BD0EF04 /* Pods_BreedsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreedsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A49B37F5DFD717EAE19500 /* Pods-Breeds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds.debug.xcconfig"; path = "Target Support Files/Pods-Breeds/Pods-Breeds.debug.xcconfig"; sourceTree = "<group>"; };
 		F77BC15B0F23444CBA5524D4 /* Pods-Breeds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds.release.xcconfig"; path = "Target Support Files/Pods-Breeds/Pods-Breeds.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 		3748872524D75B52003A2F4C /* Breeds */ = {
 			isa = PBXGroup;
 			children = (
+				A136B2D82502907D00D9DC77 /* Network */,
 				3748873424D75B54003A2F4C /* Info.plist */,
 				3744774824DB778200D90286 /* Application */,
 				37FE939D24E86FA30075F99E /* BreedDetail */,
@@ -175,6 +180,15 @@
 				37FE93A824E8754C0075F99E /* BreedDetailViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A136B2D82502907D00D9DC77 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A136B2D92502908B00D9DC77 /* ServiceProtocol.swift */,
+				A136B2DB2502925F00D9DC77 /* ImageService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		EF2C8F5656BC059BC8CFE99D /* Frameworks */ = {
@@ -333,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3744774F24DB969200D90286 /* Breed.swift in Sources */,
+				A136B2DC2502925F00D9DC77 /* ImageService.swift in Sources */,
 				37A84D7524E222620006AF73 /* UINavigationController+CustomAppearence.swift in Sources */,
 				373EA9DE24DCC29B00A2F236 /* Image.swift in Sources */,
 				37C2308F24E09F0C00D82388 /* UIImage+SetImage.swift in Sources */,
@@ -341,6 +356,7 @@
 				37A84D6B24E20FE70006AF73 /* Colors.swift in Sources */,
 				37C2308824E09A4400D82388 /* BreedsCollectionViewController.swift in Sources */,
 				37FE93AC24E8826C0075F99E /* NibLoadable.swift in Sources */,
+				A136B2DA2502908B00D9DC77 /* ServiceProtocol.swift in Sources */,
 				3748872924D75B52003A2F4C /* SceneDelegate.swift in Sources */,
 				37FE93A924E8754C0075F99E /* BreedDetailViewController.swift in Sources */,
 				37FE93AF24E896180075F99E /* NSMutableAttributedString+Boilerplate.swift in Sources */,

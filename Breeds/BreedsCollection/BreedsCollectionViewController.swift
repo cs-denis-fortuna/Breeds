@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import Keys
 
 class BreedsCollectionViewController: UIViewController {
     
@@ -35,18 +34,15 @@ class BreedsCollectionViewController: UIViewController {
 extension BreedsCollectionViewController {
 
     func fetchBreeds() {
-        guard let url = URL(string: "https://api.thedogapi.com/v1/images/search") else { return }
-        let authHeader = ["x-api-key": BreedsKeys().theDogAPIKey]
-        let parameters: [String: Any] = [
-            "order": "Asc",
-            "limit": 20,
-            "page": 0
-        ]
+        let service = ImageService.imageList(limit: 20)
+
+        guard let url = URL(string: service.path) else { return }
+        let headers = HTTPHeaders(service.headers ?? [:])
 
         AF.request(url,
-                   method: .get,
-                   parameters: parameters,
-                   headers: HTTPHeaders(authHeader)).responseData { response in
+                   method: service.method,
+                   parameters: service.parameters,
+                   headers: headers).responseData { response in
             switch response.result {
             case .success(let data):
                 do {
@@ -77,7 +73,7 @@ extension BreedsCollectionViewController {
     
     private func showEmptyBreedFeedback() {
         let alert = UIAlertController(title: "Missing Breed",
-                                      message: "The selected image does not have a releted Breed yet 😢",
+                                      message: "The selected image does not have a related Breed yet 😢",
                                       preferredStyle: .alert)
         alert.addAction(.init(title: "Ok", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
