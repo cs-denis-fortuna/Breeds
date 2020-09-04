@@ -2,8 +2,8 @@
 //  Images.swift
 //  Breeds
 //
-//  Created by erick.lozano.borges on 06/08/20.
-//  Copyright © 2020 borges.erick. All rights reserved.
+//  Created by nicholas.babo on 06/08/20.
+//  Copyright © 2020 babo.nicholas. All rights reserved.
 //
 
 import Foundation
