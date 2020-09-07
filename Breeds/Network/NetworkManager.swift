@@ -23,10 +23,11 @@ final class NetworkManager {
 
                     switch response.result {
                     case .success(let data):
-                        if let object: T = self.decode(data: data) {
-                            completion(.success(object))
+                        guard let object: T = self.decode(data: data) else {
+                            completion(.failure(NSError()))
+                            return
                         }
-                        completion(.failure(NSError()))
+                        completion(.success(object))
                     case .failure(let error):
                         completion(.failure(error))
                     }
