@@ -13,6 +13,20 @@ class BreedsCollectionViewController: UIViewController {
     // MARK: Views
     @IBOutlet weak var collectionView: UICollectionView!
 
+    private var dataSource: BreedsCollectionDataSource? {
+        didSet {
+            guard let dataSource = dataSource else { return }
+
+            dataSource.didSelectImage = { [weak self] selectedImage in
+                self?.showDetailForSelectedBreed(selectedImage)
+            }
+
+            collectionView.dataSource = dataSource
+            collectionView.delegate = dataSource
+            collectionView.reloadData()
+        }
+    }
+
     // MARK: Navigation
     weak var coordinator: BreedsCoordinator?
 
@@ -44,8 +58,7 @@ extension BreedsCollectionViewController {
         networkManager.request(service: service, responseType: [Image].self) { result in
             switch result {
             case .success(let images):
-                self.images = images
-                self.collectionView.reloadData()
+                self.dataSource = BreedsCollectionDataSource(images: images)
             case .failure:
                 print("falhou :(")
             }
@@ -65,41 +78,5 @@ extension BreedsCollectionViewController {
                                       preferredStyle: .alert)
         alert.addAction(.init(title: "Ok", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
-    }
-}
-
-// MARK: - UICollectionViewDelegateFlowLayout
-extension BreedsCollectionViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        showDetailForSelectedBreed(images[indexPath.row])
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = UIScreen.main.bounds.width / 2
-        return CGSize(width: size, height: size)
-    }
-}
-
-// MARK: - UICollectionViewDataSource
-extension BreedsCollectionViewController: UICollectionViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BreedCell", for: indexPath) as? BreedCollectionViewCell else {
-            return UICollectionViewCell()
-        }
-
-        let model = images[indexPath.row]
-
-        cell.imageView.setImage(url: URL(string: model.url))
-        cell.nameLabel.text = model.breeds.first?.name ?? "Breed not identified"
-
-        return cell
     }
 }

@@ -120,11 +120,6 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="ONb-lU-2Ml" id="R8T-aA-73S"/>
-                                    <outlet property="delegate" destination="ONb-lU-2Ml" id="Sjk-Va-e4c"/>
-                                    <outlet property="prefetchDataSource" destination="ONb-lU-2Ml" id="lp9-1X-Vfj"/>
-                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
