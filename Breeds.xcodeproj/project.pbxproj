@@ -10,7 +10,6 @@
 		373EA9DE24DCC29B00A2F236 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373EA9DD24DCC29B00A2F236 /* Image.swift */; };
 		3744774F24DB969200D90286 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744774E24DB969200D90286 /* Breed.swift */; };
 		3748872724D75B52003A2F4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748872624D75B52003A2F4C /* AppDelegate.swift */; };
-		3748872924D75B52003A2F4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748872824D75B52003A2F4C /* SceneDelegate.swift */; };
 		3748872E24D75B52003A2F4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3748872C24D75B52003A2F4C /* Main.storyboard */; };
 		3748873024D75B54003A2F4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3748872F24D75B54003A2F4C /* Assets.xcassets */; };
 		3748873324D75B54003A2F4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3748873124D75B54003A2F4C /* LaunchScreen.storyboard */; };
@@ -28,6 +27,10 @@
 		A136B2DA2502908B00D9DC77 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A136B2D92502908B00D9DC77 /* ServiceProtocol.swift */; };
 		A136B2DC2502925F00D9DC77 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A136B2DB2502925F00D9DC77 /* ImageService.swift */; };
 		A136B2DE2502991200D9DC77 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A136B2DD2502991200D9DC77 /* NetworkManager.swift */; };
+		A136B2E22506D2D700D9DC77 /* BreedsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A136B2E12506D2D600D9DC77 /* BreedsCoordinator.swift */; };
+		A136B2E52506D5B200D9DC77 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A136B2E42506D5B200D9DC77 /* Coordinator.swift */; };
+		A136B2E72506D5BC00D9DC77 /* Coordinator+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A136B2E62506D5BC00D9DC77 /* Coordinator+Navigation.swift */; };
+		A136B2E92506D70800D9DC77 /* Coordinator+Instantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A136B2E82506D70800D9DC77 /* Coordinator+Instantiation.swift */; };
 		B2983B49D64C07ABAD4EB011 /* Pods_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16ED894158264549FFF536FF /* Pods_Breeds.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +41,6 @@
 		3744774E24DB969200D90286 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		3748872324D75B52003A2F4C /* Breeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3748872624D75B52003A2F4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3748872824D75B52003A2F4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3748872D24D75B52003A2F4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3748872F24D75B54003A2F4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3748873224D75B54003A2F4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +60,10 @@
 		A136B2D92502908B00D9DC77 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		A136B2DB2502925F00D9DC77 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		A136B2DD2502991200D9DC77 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A136B2E12506D2D600D9DC77 /* BreedsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsCoordinator.swift; sourceTree = "<group>"; };
+		A136B2E42506D5B200D9DC77 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A136B2E62506D5BC00D9DC77 /* Coordinator+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Navigation.swift"; sourceTree = "<group>"; };
+		A136B2E82506D70800D9DC77 /* Coordinator+Instantiation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Instantiation.swift"; sourceTree = "<group>"; };
 		A77D1D9BB46E9DEF6BD0EF04 /* Pods_BreedsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreedsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A49B37F5DFD717EAE19500 /* Pods-Breeds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds.debug.xcconfig"; path = "Target Support Files/Pods-Breeds/Pods-Breeds.debug.xcconfig"; sourceTree = "<group>"; };
 		F77BC15B0F23444CBA5524D4 /* Pods-Breeds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds.release.xcconfig"; path = "Target Support Files/Pods-Breeds/Pods-Breeds.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				3748872624D75B52003A2F4C /* AppDelegate.swift */,
-				3748872824D75B52003A2F4C /* SceneDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -114,11 +119,10 @@
 		3748872524D75B52003A2F4C /* Breeds */ = {
 			isa = PBXGroup;
 			children = (
+				A136B2E02506D2C600D9DC77 /* Breeds */,
 				A136B2D82502907D00D9DC77 /* Network */,
 				3748873424D75B54003A2F4C /* Info.plist */,
 				3744774824DB778200D90286 /* Application */,
-				37FE939D24E86FA30075F99E /* BreedDetail */,
-				37C2308524E099E800D82388 /* BreedsCollection */,
 				373EA9DA24DCC1DB00A2F236 /* Model */,
 				3748873124D75B54003A2F4C /* LaunchScreen.storyboard */,
 				3748872C24D75B52003A2F4C /* Main.storyboard */,
@@ -149,6 +153,7 @@
 		37C2308D24E09E1100D82388 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A136B2E32506D5A800D9DC77 /* Coordinator */,
 				37FE93AB24E8826C0075F99E /* NibLoadable.swift */,
 				37FE93AE24E896180075F99E /* NSMutableAttributedString+Boilerplate.swift */,
 				37A84D6E24E212EE0006AF73 /* UIColor+Boilerplate.swift */,
@@ -192,6 +197,26 @@
 				A136B2DD2502991200D9DC77 /* NetworkManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		A136B2E02506D2C600D9DC77 /* Breeds */ = {
+			isa = PBXGroup;
+			children = (
+				A136B2E12506D2D600D9DC77 /* BreedsCoordinator.swift */,
+				37FE939D24E86FA30075F99E /* BreedDetail */,
+				37C2308524E099E800D82388 /* BreedsCollection */,
+			);
+			path = Breeds;
+			sourceTree = "<group>";
+		};
+		A136B2E32506D5A800D9DC77 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A136B2E42506D5B200D9DC77 /* Coordinator.swift */,
+				A136B2E62506D5BC00D9DC77 /* Coordinator+Navigation.swift */,
+				A136B2E82506D70800D9DC77 /* Coordinator+Instantiation.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		EF2C8F5656BC059BC8CFE99D /* Frameworks */ = {
@@ -350,10 +375,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3744774F24DB969200D90286 /* Breed.swift in Sources */,
+				A136B2E22506D2D700D9DC77 /* BreedsCoordinator.swift in Sources */,
 				A136B2DC2502925F00D9DC77 /* ImageService.swift in Sources */,
+				A136B2E92506D70800D9DC77 /* Coordinator+Instantiation.swift in Sources */,
 				37A84D7524E222620006AF73 /* UINavigationController+CustomAppearence.swift in Sources */,
+				A136B2E72506D5BC00D9DC77 /* Coordinator+Navigation.swift in Sources */,
 				373EA9DE24DCC29B00A2F236 /* Image.swift in Sources */,
 				37C2308F24E09F0C00D82388 /* UIImage+SetImage.swift in Sources */,
+				A136B2E52506D5B200D9DC77 /* Coordinator.swift in Sources */,
 				3748872724D75B52003A2F4C /* AppDelegate.swift in Sources */,
 				37A84D7024E213300006AF73 /* UIColor+Boilerplate.swift in Sources */,
 				37A84D6B24E20FE70006AF73 /* Colors.swift in Sources */,
@@ -361,7 +390,6 @@
 				37FE93AC24E8826C0075F99E /* NibLoadable.swift in Sources */,
 				A136B2DE2502991200D9DC77 /* NetworkManager.swift in Sources */,
 				A136B2DA2502908B00D9DC77 /* ServiceProtocol.swift in Sources */,
-				3748872924D75B52003A2F4C /* SceneDelegate.swift in Sources */,
 				37FE93A924E8754C0075F99E /* BreedDetailViewController.swift in Sources */,
 				37FE93AF24E896180075F99E /* NSMutableAttributedString+Boilerplate.swift in Sources */,
 				37FE93A524E873E40075F99E /* BreedDetailView.swift in Sources */,

@@ -13,6 +13,9 @@ class BreedsCollectionViewController: UIViewController {
     // MARK: Views
     @IBOutlet weak var collectionView: UICollectionView!
 
+    // MARK: Navigation
+    weak var coordinator: BreedsCoordinator?
+
     // MARK: Network
     private let networkManager: NetworkManager = NetworkManager()
 
@@ -27,7 +30,6 @@ class BreedsCollectionViewController: UIViewController {
     }
     
     func setupNavigation() {
-        navigationController?.applyCustomAppearence()
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
@@ -54,13 +56,7 @@ extension BreedsCollectionViewController {
 // MARK: - Navigation
 extension BreedsCollectionViewController {
     func showDetailForSelectedBreed(_ selectedImage: Image) {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: Self.self))
-        
-        guard let breedDetailViewController = storyboard.instantiateViewController(identifier: "BreedDetailViewController") as? BreedDetailViewController else { return }
-        breedDetailViewController.breed = selectedImage.breeds.first
-        breedDetailViewController.imageUrl = selectedImage.url
-        
-        show(breedDetailViewController, sender: self)
+        coordinator?.didSelectImage(selectedImage)
     }
     
     private func showEmptyBreedFeedback() {

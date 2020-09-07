@@ -58,7 +58,7 @@
         <!--Breeds-->
         <scene sceneID="CZc-AU-gk5">
             <objects>
-                <viewController id="ONb-lU-2Ml" customClass="BreedsCollectionViewController" customModule="Breeds" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BreedsCollectionViewController" id="ONb-lU-2Ml" customClass="BreedsCollectionViewController" customModule="Breeds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UOw-a5-rNM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
