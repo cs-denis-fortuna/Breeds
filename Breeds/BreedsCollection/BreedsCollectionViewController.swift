@@ -7,13 +7,16 @@
 //
 
 import UIKit
-import Alamofire
 
 class BreedsCollectionViewController: UIViewController {
     
     // MARK: Views
     @IBOutlet weak var collectionView: UICollectionView!
 
+    // MARK: Network
+    private let networkManager: NetworkManager = NetworkManager()
+
+    // MARK: Images
     private var images: [Image] = []
 
     // MARK: Life Cycle
@@ -36,22 +39,11 @@ extension BreedsCollectionViewController {
     func fetchBreeds() {
         let service = ImageService.imageList(limit: 20)
 
-        guard let url = URL(string: service.path) else { return }
-        let headers = HTTPHeaders(service.headers ?? [:])
-
-        AF.request(url,
-                   method: service.method,
-                   parameters: service.parameters,
-                   headers: headers).responseData { response in
-            switch response.result {
-            case .success(let data):
-                do {
-                    let object = try JSONDecoder().decode([Image].self, from: data)
-                    self.images = object
-                    self.collectionView.reloadData()
-                } catch {
-                    print("falhou :(")
-                }
+        networkManager.request(service: service, responseType: [Image].self) { result in
+            switch result {
+            case .success(let images):
+                self.images = images
+                self.collectionView.reloadData()
             case .failure:
                 print("falhou :(")
             }
