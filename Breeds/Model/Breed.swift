@@ -23,18 +23,18 @@ struct Breed: Codable {
     let history: String?
 
     enum CodingKeys: String, CodingKey {
-        case weight = "weight"
-        case height = "height"
-        case id = "id"
-        case name = "name"
+        case weight
+        case height
+        case id
+        case name
         case bredFor = "bred_for"
         case breedGroup = "breed_group"
         case lifeSpan = "life_span"
-        case temperament = "temperament"
-        case origin = "origin"
+        case temperament
+        case origin
         case countryCode = "country_code"
         case breedDescription = "description"
-        case history = "history"
+        case history
     }
 }
 

@@ -10,13 +10,21 @@ import UIKit
 
 extension Coordinator {
 
-    func createInitialViewController(from storyboard: String) -> UIViewController? {
-        return UIStoryboard(name: storyboard, bundle: .main).instantiateInitialViewController()
+    func createInitialViewController(from storyboard: Identifier.Storyboard) -> UIViewController? {
+        instantiateStoryboard(storyboard).instantiateInitialViewController()
     }
 
-    func createViewController(named identifer: String, from storyboard: String) -> UIViewController {
-        let storyboard = UIStoryboard(name: storyboard, bundle: .main)
+    func createViewController<T: UIViewController>(_ viewController: T.Type, from storyboard: Identifier.Storyboard) -> T {
+        let storyboard = instantiateStoryboard(storyboard)
 
-        return storyboard.instantiateViewController(identifier: identifer)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: T.uniqueIdentifier) as? T else {
+            preconditionFailure("Unable to create view controller with identifier \(T.uniqueIdentifier)")
+        }
+
+        return viewController
+    }
+
+    private func instantiateStoryboard(_ storyboard: Identifier.Storyboard) -> UIStoryboard {
+        UIStoryboard(name: storyboard.rawValue, bundle: .main)
     }
 }

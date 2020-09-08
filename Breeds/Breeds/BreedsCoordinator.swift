@@ -18,10 +18,8 @@ final class BreedsCoordinator: Coordinator {
     }
 
     func start(with navigationType: NavigationType) -> UIViewController {
-        guard let breedsCollectionViewController = createViewController(named: "BreedsCollectionViewController",
-                                                                        from: "Main") as? BreedsCollectionViewController else {
-                                                                            return UIViewController()
-        }
+        let breedsCollectionViewController = createViewController(BreedsCollectionViewController.self,
+                                                                  from: .main)
         breedsCollectionViewController.coordinator = self
         
         show(breedsCollectionViewController, with: .push)
@@ -33,11 +31,8 @@ final class BreedsCoordinator: Coordinator {
 
 extension BreedsCoordinator {
     func didSelectImage(_ selectedImage: Image) {
-        guard let breedDetailViewController = createViewController(named: "BreedDetailViewController",
-                                                                   from: "Main") as? BreedDetailViewController else {
-                                                                    return
-        }
-
+        let breedDetailViewController = createViewController(BreedDetailViewController.self,
+                                                             from: .main)
         breedDetailViewController.imageUrl = selectedImage.url
         breedDetailViewController.breed = selectedImage.breeds.first
 
