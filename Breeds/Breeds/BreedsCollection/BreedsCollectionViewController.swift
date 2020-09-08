@@ -8,7 +8,11 @@
 
 import UIKit
 
-class BreedsCollectionViewController: UIViewController {
+protocol BreedsCollectionViewControllerDelegate: AnyObject {
+    func didSelectImage(_ selectedImage: Image)
+}
+
+final class BreedsCollectionViewController: UIViewController {
     
     // MARK: Views
     @IBOutlet weak var collectionView: UICollectionView!
@@ -28,13 +32,23 @@ class BreedsCollectionViewController: UIViewController {
     }
 
     // MARK: Navigation
-    weak var coordinator: BreedsCoordinator?
+    weak var coordinator: BreedsCollectionViewControllerDelegate?
 
     // MARK: Network
-    private let networkManager: NetworkManager = NetworkManager()
+    private let networkManager: NetworkManagerProtocol
 
     // MARK: Images
     private var images: [Image] = []
+
+    init(networkManager: NetworkManagerProtocol) {
+        self.networkManager = networkManager
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        self.networkManager = NetworkManager()
+        super.init(coder: coder)
+    }
 
     // MARK: Life Cycle
     override func viewDidLoad() {

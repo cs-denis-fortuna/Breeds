@@ -9,7 +9,13 @@
 import Foundation
 import Alamofire
 
-final class NetworkManager {
+protocol NetworkManagerProtocol {
+    func request<T: Decodable>(service: ServiceProtocol,
+                               responseType: T.Type,
+                               completion: @escaping (Result<T, Error>) -> Void)
+}
+
+final class NetworkManager: NetworkManagerProtocol {
 
     func request<T: Decodable>(service: ServiceProtocol,
                                responseType: T.Type,

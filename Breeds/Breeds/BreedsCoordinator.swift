@@ -29,7 +29,7 @@ final class BreedsCoordinator: Coordinator {
 
 // MARK: BreedsCollectionViewController events
 
-extension BreedsCoordinator {
+extension BreedsCoordinator: BreedsCollectionViewControllerDelegate {
     func didSelectImage(_ selectedImage: Image) {
         let breedDetailViewController = createViewController(BreedDetailViewController.self,
                                                              from: .main)
