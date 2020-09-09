@@ -10,7 +10,7 @@ Esse repositório serve como guia para a talk sobre AntiPatterns. A ideia é pas
 
 Essa é branch inicial do estudo. Aqui, podemos ver o código da BreedsCollectionViewController bem acoplado e contendo diversas responsabilidades. Desde a configuração do serviço e requisição da lista de imagens, até a configuração das células e instanciação da próxima tela são feitas dentro dessa ViewController. 
 
-### Service
+## Service
 
 ### branch: `antiPatterns/service`
 
