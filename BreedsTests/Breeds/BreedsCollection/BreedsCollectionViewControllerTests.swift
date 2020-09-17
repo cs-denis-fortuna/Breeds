@@ -8,6 +8,7 @@
 
 import Quick
 import Nimble
+import Nimble_Snapshots
 
 @testable import Breeds
 
@@ -28,7 +29,6 @@ final class BreedsCollectionViewControllerTests: QuickSpec {
         }
 
         describe("viewDidLoad") {
-
             beforeEach {
                 sut.viewDidLoad()
             }
@@ -55,8 +55,27 @@ final class BreedsCollectionViewControllerTests: QuickSpec {
             }
         }
 
-        func createMockImage() -> Image {
-            Image(breeds: [], id: "id", url: "url", width: 0, height: 0)
+        describe("setImages"){
+            beforeEach {
+                let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: BreedsCollectionViewController.self))
+                sut = storyboard.instantiateViewController(identifier: "BreedsCollectionViewController")
+            }
+
+            it("has a valid snapshot") {
+                let viewModels = [ImageViewModel(url: AssetHelper.LocalImage.doguinho.url,
+                                                title: "Teste"),
+                                  ImageViewModel(url: AssetHelper.LocalImage.doguinho.url,
+                                                title: "Teste com nome grande")]
+
+                _ = sut.view
+                sut.setImages(viewModels)
+
+                expect(sut.view).toEventually(haveValidSnapshot())
+            }
+        }
+
+        func createMockImage() -> Breeds.Image {
+            Breeds.Image(breeds: [], id: "id", url: "url", width: 0, height: 0)
         }
     }
 }

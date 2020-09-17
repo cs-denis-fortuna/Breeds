@@ -8,27 +8,41 @@
 
 import UIKit
 
+struct ImageViewModel {
+    var url: URL?
+    var title: String
+
+    init(url: URL?, title: String) {
+        self.url = url
+        self.title = title
+    }
+
+    init(image: Image) {
+        self.url = URL(string: image.url)
+        self.title = image.breeds.first?.name ?? "Breed not identified"
+    }
+}
+
 final class BreedsCollectionDataSource: NSObject, UICollectionViewDataSource {
 
-    private let images: [Image]
+    private let viewModels: [ImageViewModel]
 
-    var didSelectImage: ((Image) -> Void)?
+    var didSelectImage: ((IndexPath) -> Void)?
 
-    init(images: [Image]) {
-        self.images = images
+    init(images: [ImageViewModel]) {
+        self.viewModels = images
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        images.count
+        viewModels.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: BreedCollectionViewCell.self)
 
-        let model = images[indexPath.row]
+        let model = viewModels[indexPath.row]
 
-        cell.imageView.setImage(url: URL(string: model.url))
-        cell.nameLabel.text = model.breeds.first?.name ?? "Breed not identified"
+        cell.set(imageURL: model.url, name: model.title)
 
         return cell
     }
@@ -37,9 +51,7 @@ final class BreedsCollectionDataSource: NSObject, UICollectionViewDataSource {
 extension BreedsCollectionDataSource: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedImage = images[indexPath.row]
-
-        didSelectImage?(selectedImage)
+        didSelectImage?(indexPath)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

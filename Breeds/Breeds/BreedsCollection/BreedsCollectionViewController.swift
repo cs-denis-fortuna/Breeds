@@ -21,8 +21,9 @@ final class BreedsCollectionViewController: UIViewController {
         didSet {
             guard let dataSource = dataSource else { return }
 
-            dataSource.didSelectImage = { [weak self] selectedImage in
-                self?.showDetailForSelectedBreed(selectedImage)
+            dataSource.didSelectImage = { [weak self] indexPath in
+                guard let image = self?.images[indexPath.item] else { return }
+                self?.showDetailForSelectedBreed(image)
             }
 
             collectionView.dataSource = dataSource
@@ -38,7 +39,12 @@ final class BreedsCollectionViewController: UIViewController {
     private let networkManager: NetworkManagerProtocol
 
     // MARK: Images
-    private var images: [Image] = []
+    private var images: [Image] = [] {
+        didSet {
+            let viewModels = images.map { ImageViewModel(image: $0) }
+            setImages(viewModels)
+        }
+    }
 
     init(networkManager: NetworkManagerProtocol) {
         self.networkManager = networkManager
@@ -69,14 +75,18 @@ extension BreedsCollectionViewController {
     func fetchBreeds() {
         let service = ImageService.imageList(limit: 20)
 
-        networkManager.request(service: service, responseType: [Image].self) { result in
+        networkManager.request(service: service, responseType: [Image].self) { [weak self] result in
             switch result {
             case .success(let images):
-                self.dataSource = BreedsCollectionDataSource(images: images)
+                self?.images = images
             case .failure:
                 print("falhou :(")
             }
         }
+    }
+
+    func setImages(_ images: [ImageViewModel]) {
+        self.dataSource = BreedsCollectionDataSource(images: images)
     }
 }
 

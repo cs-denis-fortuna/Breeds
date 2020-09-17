@@ -13,4 +13,9 @@ class BreedCollectionViewCell: UICollectionViewCell {
     // MARK: Views
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+
+    func set(imageURL: URL?, name: String) {
+        self.imageView.setImage(url: imageURL)
+        self.nameLabel.text = name
+    }
 }
