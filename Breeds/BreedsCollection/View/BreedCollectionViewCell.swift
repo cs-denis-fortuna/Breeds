@@ -28,7 +28,7 @@ class BreedCollectionViewCell: UICollectionViewCell {
     
     let nameLabel: UILabel = {
         let label = UILabel(frame: .zero)
-        label.numberOfLines = 1
+        label.numberOfLines = 2
         label.textColor = TextColor.primary
         label.font = UIFont.systemFont(ofSize: 13, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -47,9 +47,14 @@ class BreedCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: Setup
-    func setup(image: Image) {
-        nameLabel.text = image.breeds.first?.name ?? "Breed not identified"
-        imageView.setImage(url: URL(string: image.url))
+//    func setup(image: Image) {
+//        nameLabel.text = image.breeds.first?.name ?? "Breed not identified"
+//        imageView.setImage(url: URL(string: image.url))
+//    }
+
+    func setup(name: String, url: String) {
+        nameLabel.text = name
+        imageView.setImage(url: URL(string: url))
     }
 }
 
@@ -68,7 +73,7 @@ extension BreedCollectionViewCell: ViewCodable {
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
         
-            overlayView.heightAnchor.constraint(equalToConstant: 24),
+            overlayView.heightAnchor.constraint(greaterThanOrEqualToConstant: 24),
             overlayView.bottomAnchor.constraint(equalTo: bottomAnchor),
             overlayView.leadingAnchor.constraint(equalTo: leadingAnchor),
             overlayView.trailingAnchor.constraint(equalTo: trailingAnchor),

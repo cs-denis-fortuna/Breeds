@@ -12,6 +12,8 @@ class AssetHelper {
     
     enum LocalImage: String {
         case carameloDog = "caramelo_dog.jpg"
+        case doguinho = "doguinho.jpg"
+        case puppy = "puppy.jpeg"
 
         var fileName: String {
             let components = rawValue.components(separatedBy: ".")

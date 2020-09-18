@@ -114,7 +114,13 @@ extension BreedsCollectionViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifier.Cell.breedCell, for: indexPath) as? BreedCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.setup(image: viewModel.images[indexPath.row])
+
+        let image = viewModel.images[indexPath.row]
+        let name = image.breeds.first?.name ?? "Breed not identified"
+
+        cell.setup(name: name, url: image.url)
+        
+//        cell.setup(image: viewModel.images[indexPath.row])
         return cell
     }
 }

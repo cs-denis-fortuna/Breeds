@@ -37,7 +37,12 @@
 		37FE93AF24E896180075F99E /* NSMutableAttributedString+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE93AE24E896180075F99E /* NSMutableAttributedString+Boilerplate.swift */; };
 		7D47A2EF7630EFA1F7B303D6 /* Pods_BreedsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB67F1ECE1598BA4359BF4AA /* Pods_BreedsTests.framework */; };
 		A125F225251455D700AB8049 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125F224251455D700AB8049 /* ViewCodable.swift */; };
+		A125F229251458B200AB8049 /* BreedCollectionViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125F228251458B200AB8049 /* BreedCollectionViewCellTests.swift */; };
 		A125F22B25145ADE00AB8049 /* CGRect+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125F22A25145ADE00AB8049 /* CGRect+Ext.swift */; };
+		A19531DC25147D8F0096E992 /* puppy.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A19531DB25147D8F0096E992 /* puppy.jpeg */; };
+		A1F761A525146728001CF793 /* doguinho.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1F761A425146728001CF793 /* doguinho.jpg */; };
+		A1F761B925146C7F001CF793 /* ReferenceImages in Resources */ = {isa = PBXBuildFile; fileRef = A1F761B825146C7F001CF793 /* ReferenceImages */; };
+		A1F761BC25146D40001CF793 /* BreedDetailViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F761BB25146D40001CF793 /* BreedDetailViewTests.swift */; };
 		B2983B49D64C07ABAD4EB011 /* Pods_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16ED894158264549FFF536FF /* Pods_Breeds.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,7 +95,12 @@
 		79480132B220427A3784B353 /* Pods-Breeds-BreedsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds-BreedsTests.release.xcconfig"; path = "Target Support Files/Pods-Breeds-BreedsTests/Pods-Breeds-BreedsTests.release.xcconfig"; sourceTree = "<group>"; };
 		9EFB0DB30FD29FF68C30A243 /* Pods-BreedsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.release.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A125F224251455D700AB8049 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
+		A125F228251458B200AB8049 /* BreedCollectionViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCollectionViewCellTests.swift; sourceTree = "<group>"; };
 		A125F22A25145ADE00AB8049 /* CGRect+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Ext.swift"; sourceTree = "<group>"; };
+		A19531DB25147D8F0096E992 /* puppy.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = puppy.jpeg; sourceTree = "<group>"; };
+		A1F761A425146728001CF793 /* doguinho.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doguinho.jpg; sourceTree = "<group>"; };
+		A1F761B825146C7F001CF793 /* ReferenceImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReferenceImages; sourceTree = "<group>"; };
+		A1F761BB25146D40001CF793 /* BreedDetailViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewTests.swift; sourceTree = "<group>"; };
 		C8A49B37F5DFD717EAE19500 /* Pods-Breeds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds.debug.xcconfig"; path = "Target Support Files/Pods-Breeds/Pods-Breeds.debug.xcconfig"; sourceTree = "<group>"; };
 		CB67F1ECE1598BA4359BF4AA /* Pods_BreedsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreedsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77BC15B0F23444CBA5524D4 /* Pods-Breeds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds.release.xcconfig"; path = "Target Support Files/Pods-Breeds/Pods-Breeds.release.xcconfig"; sourceTree = "<group>"; };
@@ -199,8 +209,11 @@
 		3748873C24D75B54003A2F4C /* BreedsTests */ = {
 			isa = PBXGroup;
 			children = (
+				A1F761B825146C7F001CF793 /* ReferenceImages */,
 				3748873F24D75B54003A2F4C /* Info.plist */,
 				37963D2524EB54F000DDC936 /* Assets */,
+				A125F2262514589B00AB8049 /* BreedsCollection */,
+				A1F761BA25146D2A001CF793 /* BreedsDetail */,
 				37C4BA8624E9F2910071659E /* Stubs */,
 				37963D2424EB54F000DDC936 /* Utils */,
 			);
@@ -227,7 +240,9 @@
 		37963D2524EB54F000DDC936 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A19531DB25147D8F0096E992 /* puppy.jpeg */,
 				37963D2624EB550500DDC936 /* caramelo_dog.jpg */,
+				A1F761A425146728001CF793 /* doguinho.jpg */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -340,6 +355,38 @@
 				37FE93A824E8754C0075F99E /* BreedDetailViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A125F2262514589B00AB8049 /* BreedsCollection */ = {
+			isa = PBXGroup;
+			children = (
+				A125F227251458A600AB8049 /* View */,
+			);
+			path = BreedsCollection;
+			sourceTree = "<group>";
+		};
+		A125F227251458A600AB8049 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A125F228251458B200AB8049 /* BreedCollectionViewCellTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1F761BA25146D2A001CF793 /* BreedsDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A1F761BF25147328001CF793 /* View */,
+			);
+			path = BreedsDetail;
+			sourceTree = "<group>";
+		};
+		A1F761BF25147328001CF793 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1F761BB25146D40001CF793 /* BreedDetailViewTests.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		EF2C8F5656BC059BC8CFE99D /* Frameworks */ = {
@@ -461,6 +508,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A19531DC25147D8F0096E992 /* puppy.jpeg in Resources */,
+				A1F761B925146C7F001CF793 /* ReferenceImages in Resources */,
+				A1F761A525146728001CF793 /* doguinho.jpg in Resources */,
 				37963D2724EB550500DDC936 /* caramelo_dog.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,6 +650,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A125F22B25145ADE00AB8049 /* CGRect+Ext.swift in Sources */,
+				A125F229251458B200AB8049 /* BreedCollectionViewCellTests.swift in Sources */,
+				A1F761BC25146D40001CF793 /* BreedDetailViewTests.swift in Sources */,
 				37963D2924EB551C00DDC936 /* AssetHelper.swift in Sources */,
 				37C4BA8824E9F2A30071659E /* BreedFactory.swift in Sources */,
 				37C4BA8A24E9F2AE0071659E /* ImageFactory.swift in Sources */,
