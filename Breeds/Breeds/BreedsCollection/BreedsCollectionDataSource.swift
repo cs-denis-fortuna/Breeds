@@ -9,16 +9,16 @@
 import UIKit
 
 struct ImageViewModel {
-    var url: URL?
+    var url: String
     var title: String
 
-    init(url: URL?, title: String) {
+    init(url: String, title: String) {
         self.url = url
         self.title = title
     }
 
     init(image: Image) {
-        self.url = URL(string: image.url)
+        self.url = image.url
         self.title = image.breeds.first?.name ?? "Breed not identified"
     }
 }

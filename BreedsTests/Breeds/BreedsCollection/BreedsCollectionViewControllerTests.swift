@@ -63,9 +63,11 @@ final class BreedsCollectionViewControllerTests: QuickSpec {
 
             it("has a valid snapshot") {
                 let viewModels = [ImageViewModel(url: AssetHelper.LocalImage.doguinho.url,
-                                                title: "Teste"),
+                                                 title: "Teste"),
                                   ImageViewModel(url: AssetHelper.LocalImage.doguinho.url,
-                                                title: "Teste com nome grande")]
+                                                 title: "Teste com nome grande"),
+                                  ImageViewModel(url: AssetHelper.LocalImage.catiorro.url,
+                                                 title: "Teste com imagem grande")]
 
                 _ = sut.view
                 sut.setImages(viewModels)

@@ -12,6 +12,7 @@ final class AssetHelper {
 
     enum LocalImage: String {
         case doguinho = "doguinho.jpg"
+        case catiorro = "catiorro.jpg"
 
         var fileName: String {
             let components = rawValue.components(separatedBy: ".")
@@ -23,9 +24,9 @@ final class AssetHelper {
             return components[1]
         }
 
-        var url: URL? {
-            let path = Bundle(for: AssetHelper.self).path(forResource: fileName, ofType: fileExtension) ?? ""
-            return URL(fileURLWithPath: path)
+        var url: String {
+            guard let path = Bundle(for: AssetHelper.self).path(forResource: fileName, ofType: fileExtension) else { return "" }
+            return URL(fileURLWithPath: path).absoluteString
         }
     }
 }
