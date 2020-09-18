@@ -19,9 +19,6 @@
 		378CBBB524E49D1E003A641B /* BreedsCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378CBBB424E49D1E003A641B /* BreedsCollectionViewModel.swift */; };
 		37963D2724EB550500DDC936 /* caramelo_dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37963D2624EB550500DDC936 /* caramelo_dog.jpg */; };
 		37963D2924EB551C00DDC936 /* AssetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37963D2824EB551C00DDC936 /* AssetHelper.swift */; };
-		37963D2D24EB646A00DDC936 /* BreedDetailViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37963D2C24EB646A00DDC936 /* BreedDetailViewSpec.swift */; };
-		379E67E124E9F53E00EFB899 /* BreedCollectionViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E67E024E9F53E00EFB899 /* BreedCollectionViewCellSpec.swift */; };
-		379E67EA24E9F9F000EFB899 /* ReferenceImages in Resources */ = {isa = PBXBuildFile; fileRef = 379E67E924E9F9F000EFB899 /* ReferenceImages */; };
 		37A84D6B24E20FE70006AF73 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A84D6A24E20FE70006AF73 /* Colors.swift */; };
 		37A84D7024E213300006AF73 /* UIColor+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A84D6E24E212EE0006AF73 /* UIColor+Boilerplate.swift */; };
 		37A84D7324E2205B0006AF73 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A84D7224E2205B0006AF73 /* Identifier.swift */; };
@@ -31,14 +28,16 @@
 		37C2308824E09A4400D82388 /* BreedsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308724E09A4400D82388 /* BreedsCollectionViewController.swift */; };
 		37C2308C24E09C5600D82388 /* BreedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308B24E09C5600D82388 /* BreedCollectionViewCell.swift */; };
 		37C2308F24E09F0C00D82388 /* UIImage+SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2308E24E09F0C00D82388 /* UIImage+SetImage.swift */; };
-		37C4BA8824E9F2A30071659E /* Breed+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4BA8724E9F2A30071659E /* Breed+Stub.swift */; };
-		37C4BA8A24E9F2AE0071659E /* Image+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4BA8924E9F2AE0071659E /* Image+Stub.swift */; };
+		37C4BA8824E9F2A30071659E /* BreedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4BA8724E9F2A30071659E /* BreedFactory.swift */; };
+		37C4BA8A24E9F2AE0071659E /* ImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4BA8924E9F2AE0071659E /* ImageFactory.swift */; };
 		37FE93A524E873E40075F99E /* BreedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE93A424E873E40075F99E /* BreedDetailView.swift */; };
 		37FE93A724E873EE0075F99E /* BreedDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37FE93A624E873EE0075F99E /* BreedDetailView.xib */; };
 		37FE93A924E8754C0075F99E /* BreedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE93A824E8754C0075F99E /* BreedDetailViewController.swift */; };
 		37FE93AC24E8826C0075F99E /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE93AB24E8826C0075F99E /* NibLoadable.swift */; };
 		37FE93AF24E896180075F99E /* NSMutableAttributedString+Boilerplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE93AE24E896180075F99E /* NSMutableAttributedString+Boilerplate.swift */; };
 		7D47A2EF7630EFA1F7B303D6 /* Pods_BreedsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB67F1ECE1598BA4359BF4AA /* Pods_BreedsTests.framework */; };
+		A125F225251455D700AB8049 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125F224251455D700AB8049 /* ViewCodable.swift */; };
+		A125F22B25145ADE00AB8049 /* CGRect+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125F22A25145ADE00AB8049 /* CGRect+Ext.swift */; };
 		B2983B49D64C07ABAD4EB011 /* Pods_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16ED894158264549FFF536FF /* Pods_Breeds.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,9 +69,6 @@
 		378CBBB424E49D1E003A641B /* BreedsCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsCollectionViewModel.swift; sourceTree = "<group>"; };
 		37963D2624EB550500DDC936 /* caramelo_dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = caramelo_dog.jpg; sourceTree = "<group>"; };
 		37963D2824EB551C00DDC936 /* AssetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetHelper.swift; sourceTree = "<group>"; };
-		37963D2C24EB646A00DDC936 /* BreedDetailViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewSpec.swift; sourceTree = "<group>"; };
-		379E67E024E9F53E00EFB899 /* BreedCollectionViewCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCollectionViewCellSpec.swift; sourceTree = "<group>"; };
-		379E67E924E9F9F000EFB899 /* ReferenceImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReferenceImages; sourceTree = "<group>"; };
 		37A84D6A24E20FE70006AF73 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		37A84D6E24E212EE0006AF73 /* UIColor+Boilerplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Boilerplate.swift"; sourceTree = "<group>"; };
 		37A84D7224E2205B0006AF73 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
@@ -82,8 +78,8 @@
 		37C2308724E09A4400D82388 /* BreedsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsCollectionViewController.swift; sourceTree = "<group>"; };
 		37C2308B24E09C5600D82388 /* BreedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCollectionViewCell.swift; sourceTree = "<group>"; };
 		37C2308E24E09F0C00D82388 /* UIImage+SetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+SetImage.swift"; sourceTree = "<group>"; };
-		37C4BA8724E9F2A30071659E /* Breed+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Breed+Stub.swift"; sourceTree = "<group>"; };
-		37C4BA8924E9F2AE0071659E /* Image+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Stub.swift"; sourceTree = "<group>"; };
+		37C4BA8724E9F2A30071659E /* BreedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedFactory.swift; sourceTree = "<group>"; };
+		37C4BA8924E9F2AE0071659E /* ImageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFactory.swift; sourceTree = "<group>"; };
 		37EE2BD824DB6677000590C6 /* TheDogAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDogAPIConfig.swift; sourceTree = "<group>"; };
 		37FE93A424E873E40075F99E /* BreedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailView.swift; sourceTree = "<group>"; };
 		37FE93A624E873EE0075F99E /* BreedDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedDetailView.xib; sourceTree = "<group>"; };
@@ -93,6 +89,8 @@
 		3D40EBBA1567DB9AE80ED642 /* Pods-Breeds-BreedsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds-BreedsTests.debug.xcconfig"; path = "Target Support Files/Pods-Breeds-BreedsTests/Pods-Breeds-BreedsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		79480132B220427A3784B353 /* Pods-Breeds-BreedsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds-BreedsTests.release.xcconfig"; path = "Target Support Files/Pods-Breeds-BreedsTests/Pods-Breeds-BreedsTests.release.xcconfig"; sourceTree = "<group>"; };
 		9EFB0DB30FD29FF68C30A243 /* Pods-BreedsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.release.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.release.xcconfig"; sourceTree = "<group>"; };
+		A125F224251455D700AB8049 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
+		A125F22A25145ADE00AB8049 /* CGRect+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Ext.swift"; sourceTree = "<group>"; };
 		C8A49B37F5DFD717EAE19500 /* Pods-Breeds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds.debug.xcconfig"; path = "Target Support Files/Pods-Breeds/Pods-Breeds.debug.xcconfig"; sourceTree = "<group>"; };
 		CB67F1ECE1598BA4359BF4AA /* Pods_BreedsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreedsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77BC15B0F23444CBA5524D4 /* Pods-Breeds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds.release.xcconfig"; path = "Target Support Files/Pods-Breeds/Pods-Breeds.release.xcconfig"; sourceTree = "<group>"; };
@@ -201,10 +199,7 @@
 		3748873C24D75B54003A2F4C /* BreedsTests */ = {
 			isa = PBXGroup;
 			children = (
-				379E67E924E9F9F000EFB899 /* ReferenceImages */,
 				3748873F24D75B54003A2F4C /* Info.plist */,
-				37963D2C24EB646A00DDC936 /* BreedDetailViewSpec.swift */,
-				379E67E024E9F53E00EFB899 /* BreedCollectionViewCellSpec.swift */,
 				37963D2524EB54F000DDC936 /* Assets */,
 				37C4BA8624E9F2910071659E /* Stubs */,
 				37963D2424EB54F000DDC936 /* Utils */,
@@ -224,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				37963D2824EB551C00DDC936 /* AssetHelper.swift */,
+				A125F22A25145ADE00AB8049 /* CGRect+Ext.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -297,6 +293,7 @@
 				37A84D6E24E212EE0006AF73 /* UIColor+Boilerplate.swift */,
 				37C2308E24E09F0C00D82388 /* UIImage+SetImage.swift */,
 				37A84D7424E222620006AF73 /* UINavigationController+CustomAppearence.swift */,
+				A125F224251455D700AB8049 /* ViewCodable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -304,8 +301,8 @@
 		37C4BA8624E9F2910071659E /* Stubs */ = {
 			isa = PBXGroup;
 			children = (
-				37C4BA8724E9F2A30071659E /* Breed+Stub.swift */,
-				37C4BA8924E9F2AE0071659E /* Image+Stub.swift */,
+				37C4BA8724E9F2A30071659E /* BreedFactory.swift */,
+				37C4BA8924E9F2AE0071659E /* ImageFactory.swift */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -465,7 +462,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				37963D2724EB550500DDC936 /* caramelo_dog.jpg in Resources */,
-				379E67EA24E9F9F000EFB899 /* ReferenceImages in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +582,7 @@
 				37C2308424DF4DC500D82388 /* AlamofireRequestManager.swift in Sources */,
 				37A84D7024E213300006AF73 /* UIColor+Boilerplate.swift in Sources */,
 				37C2308224DF4D7E00D82388 /* RequestManager.swift in Sources */,
+				A125F225251455D700AB8049 /* ViewCodable.swift in Sources */,
 				37A84D6B24E20FE70006AF73 /* Colors.swift in Sources */,
 				37C2308824E09A4400D82388 /* BreedsCollectionViewController.swift in Sources */,
 				37FE93AC24E8826C0075F99E /* NibLoadable.swift in Sources */,
@@ -602,11 +599,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37963D2D24EB646A00DDC936 /* BreedDetailViewSpec.swift in Sources */,
+				A125F22B25145ADE00AB8049 /* CGRect+Ext.swift in Sources */,
 				37963D2924EB551C00DDC936 /* AssetHelper.swift in Sources */,
-				37C4BA8824E9F2A30071659E /* Breed+Stub.swift in Sources */,
-				37C4BA8A24E9F2AE0071659E /* Image+Stub.swift in Sources */,
-				379E67E124E9F53E00EFB899 /* BreedCollectionViewCellSpec.swift in Sources */,
+				37C4BA8824E9F2A30071659E /* BreedFactory.swift in Sources */,
+				37C4BA8A24E9F2AE0071659E /* ImageFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

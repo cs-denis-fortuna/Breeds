@@ -6,25 +6,7 @@
 //  Copyright © 2020 borges.erick. All rights reserved.
 //
 
-import SwiftUI
 import UIKit
-
-protocol ViewCodable {
-    func setupViews()
-    func setupViewHierarchy()
-    func setupConstraints()
-    func setupAditionalConfiguration()
-}
-
-extension ViewCodable {
-    func setupViews() {
-        setupViewHierarchy()
-        setupConstraints()
-        setupAditionalConfiguration()
-    }
-    
-    func setupAditionalConfiguration() { }
-}
 
 class BreedCollectionViewCell: UICollectionViewCell {
     

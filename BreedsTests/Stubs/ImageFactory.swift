@@ -8,10 +8,10 @@
 
 @testable import Breeds
 
-extension Image {
-    static func stub(
-        breeds: [Breed] = [.stub()],
-        url: String = "") -> Image {
+enum ImageFactory {
+
+    static func build(breeds: [Breed] = [BreedFactory.build()],
+                      url: String = "") -> Image {
         return Image(breeds: breeds, url: url)
     }
 }
