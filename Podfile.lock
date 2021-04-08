@@ -22,13 +22,13 @@ DEPENDENCIES:
   - Alamofire (~> 5.2)
   - Keys (from `Pods/CocoaPodsKeys`)
   - Kingfisher (~> 5.14)
-  - Nimble (~> 8.1.1)
-  - Nimble-Snapshots (~> 8.2.1)
-  - Quick (~> 3.0)
+  - Nimble
+  - Nimble-Snapshots
+  - Quick
   - SwiftLint (= 0.39.2)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - iOSSnapshotTestCase
     - Kingfisher
@@ -51,6 +51,6 @@ SPEC CHECKSUMS:
   Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: 537c234ac9095b5fa10150f61fc09d0bc43de809
+PODFILE CHECKSUM: 848cd88e1eaa5bbfe80e1d43fa3ce7796fab4203
 
 COCOAPODS: 1.9.3

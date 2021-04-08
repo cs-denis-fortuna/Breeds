@@ -13,18 +13,39 @@ import Keys
 class BreedsCollectionViewController: UIViewController {
     
     // MARK: Views
-    @IBOutlet weak var collectionView: UICollectionView!
+    let collectionFlowLayout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = .zero
+        layout.minimumInteritemSpacing = .zero
+        return layout
+    }()
+    
+    lazy var collectionView: UICollectionView = {
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: collectionFlowLayout)
+        collection.delegate = self
+        collection.dataSource = self
+//        collection.prefetchDataSource = self
+        collection.backgroundColor = BackgroundColor.main
+        collection.register(BreedCollectionViewCell.self, forCellWithReuseIdentifier: Identifier.Cell.breedCell)
+        collection.translatesAutoresizingMaskIntoConstraints = false
+        return collection
+    }()
 
     private var images: [Image] = []
 
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
         setupNavigation()
         fetchBreeds()
+        
+//        viewModel.fetchImages()
     }
     
     func setupNavigation() {
+        title = "Breeds"
         navigationController?.applyCustomAppearence()
         navigationController?.navigationBar.prefersLargeTitles = true
     }
@@ -112,10 +133,24 @@ extension BreedsCollectionViewController: UICollectionViewDataSource {
         }
 
         let model = images[indexPath.row]
-
-        cell.imageView.setImage(url: URL(string: model.url))
-        cell.nameLabel.text = model.breeds.first?.name ?? "Breed not identified"
+        cell.setup(image: model)
 
         return cell
+    }
+}
+
+// MARK: Autolayout
+extension BreedsCollectionViewController: ViewCodable {
+    func setupViewHierarchy() {
+        view.addSubview(collectionView)
+    }
+
+    func setupConstraints() {
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
     }
 }
