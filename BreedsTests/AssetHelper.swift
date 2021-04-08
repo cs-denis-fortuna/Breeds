@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class AssetHelper {
     
@@ -24,10 +25,11 @@ class AssetHelper {
         }
         
         var url: String {
-//            guard let path = Bundle(for: AssetHelper.self).path(forResource: fileName, ofType: fileExtension) else { return "" }
-            guard let path = Bundle.main.path(forResource: fileName, ofType: fileName) else { return "" }
+            
+            let test = 0
+            guard let path = Bundle(for: AssetHelper.self).path(forResource: fileName, ofType: fileExtension) else { return "" }
+            
             return URL(fileURLWithPath: path).absoluteString
-            let aa = 1
         }
     }
 }

@@ -31,7 +31,6 @@ class BreedCollectionViewCellSpec: QuickSpec {
                     expect(sut).toEventually(recordSnapshot(named: "BreedCollectionViewCell_Layout", identifier: nil, usesDrawRect: false), timeout: 0.5)
                 }
             }
-                
         }
     }
 }

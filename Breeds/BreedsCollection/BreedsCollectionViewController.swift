@@ -40,8 +40,6 @@ class BreedsCollectionViewController: UIViewController {
         setupViews()
         setupNavigation()
         fetchBreeds()
-        
-//        viewModel.fetchImages()
     }
     
     func setupNavigation() {
