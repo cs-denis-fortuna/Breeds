@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BreedDetailView: UIView, NibLoadable {
+class BreedDetailView: UIView {
     
     // MARK: Views
     let scrollView: UIScrollView = {
