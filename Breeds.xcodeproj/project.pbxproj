@@ -34,6 +34,7 @@
 		384B4E12261E736200D4C5A5 /* AssetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B4E11261E736200D4C5A5 /* AssetHelper.swift */; };
 		384B4E1A261EB3CF00D4C5A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B4E19261EB3CF00D4C5A5 /* Assets.xcassets */; };
 		384B4E26261F895D00D4C5A5 /* BreedDetailLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B4E25261F895D00D4C5A5 /* BreedDetailLabel.swift */; };
+		384B4E2A261FC59500D4C5A5 /* BreedDetailViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B4E29261FC59400D4C5A5 /* BreedDetailViewSpec.swift */; };
 		9CAD976A9C216850ADEEAC9A /* Pods_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3AAEAAEF2625C26EC5DDF9C /* Pods_Breeds.framework */; };
 		E1753C4775685DBCE28AEFDD /* Pods_BreedsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665C4262D8A3C905403DE60D /* Pods_BreedsTests.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,7 @@
 		384B4E11261E736200D4C5A5 /* AssetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetHelper.swift; sourceTree = "<group>"; };
 		384B4E19261EB3CF00D4C5A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		384B4E25261F895D00D4C5A5 /* BreedDetailLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailLabel.swift; sourceTree = "<group>"; };
+		384B4E29261FC59400D4C5A5 /* BreedDetailViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewSpec.swift; sourceTree = "<group>"; };
 		59949F29E5B0C817D73C04E0 /* Pods-Breeds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds.debug.xcconfig"; path = "Target Support Files/Pods-Breeds/Pods-Breeds.debug.xcconfig"; sourceTree = "<group>"; };
 		5B8B12FDF73FB65182CCEBFA /* Pods-BreedsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.release.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.release.xcconfig"; sourceTree = "<group>"; };
 		665C4262D8A3C905403DE60D /* Pods_BreedsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreedsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +231,7 @@
 				384B4E0D261E6E7C00D4C5A5 /* Breed+Stub.swift */,
 				384B4E11261E736200D4C5A5 /* AssetHelper.swift */,
 				384B4E19261EB3CF00D4C5A5 /* Assets.xcassets */,
+				384B4E29261FC59400D4C5A5 /* BreedDetailViewSpec.swift */,
 			);
 			path = BreedsTests;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				384B4E0E261E6E7C00D4C5A5 /* Breed+Stub.swift in Sources */,
+				384B4E2A261FC59500D4C5A5 /* BreedDetailViewSpec.swift in Sources */,
 				384B4D75261D695C00D4C5A5 /* Identifier.swift in Sources */,
 				384B4E0A261E674D00D4C5A5 /* Image+Stub.swift in Sources */,
 				384B4E12261E736200D4C5A5 /* AssetHelper.swift in Sources */,
