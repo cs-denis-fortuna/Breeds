@@ -32,6 +32,8 @@
 		384B4E1A261EB3CF00D4C5A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B4E19261EB3CF00D4C5A5 /* Assets.xcassets */; };
 		384B4E26261F895D00D4C5A5 /* BreedDetailLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B4E25261F895D00D4C5A5 /* BreedDetailLabel.swift */; };
 		384B4E2A261FC59500D4C5A5 /* BreedDetailViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B4E29261FC59400D4C5A5 /* BreedDetailViewSpec.swift */; };
+		384B4E342620A2B300D4C5A5 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B4E332620A2B300D4C5A5 /* ServiceProtocol.swift */; };
+		384B4E392620A57000D4C5A5 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B4E382620A57000D4C5A5 /* ImageService.swift */; };
 		9CAD976A9C216850ADEEAC9A /* Pods_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3AAEAAEF2625C26EC5DDF9C /* Pods_Breeds.framework */; };
 		E1753C4775685DBCE28AEFDD /* Pods_BreedsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665C4262D8A3C905403DE60D /* Pods_BreedsTests.framework */; };
 /* End PBXBuildFile section */
@@ -76,6 +78,8 @@
 		384B4E19261EB3CF00D4C5A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		384B4E25261F895D00D4C5A5 /* BreedDetailLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailLabel.swift; sourceTree = "<group>"; };
 		384B4E29261FC59400D4C5A5 /* BreedDetailViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewSpec.swift; sourceTree = "<group>"; };
+		384B4E332620A2B300D4C5A5 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		384B4E382620A57000D4C5A5 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		59949F29E5B0C817D73C04E0 /* Pods-Breeds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds.debug.xcconfig"; path = "Target Support Files/Pods-Breeds/Pods-Breeds.debug.xcconfig"; sourceTree = "<group>"; };
 		5B8B12FDF73FB65182CCEBFA /* Pods-BreedsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.release.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.release.xcconfig"; sourceTree = "<group>"; };
 		665C4262D8A3C905403DE60D /* Pods_BreedsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreedsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +156,7 @@
 				3748873124D75B54003A2F4C /* LaunchScreen.storyboard */,
 				37A84D6824E20FBC0006AF73 /* Resources */,
 				37C2308D24E09E1100D82388 /* Utils */,
+				384B4E372620A3E200D4C5A5 /* Network */,
 			);
 			path = Breeds;
 			sourceTree = "<group>";
@@ -225,6 +230,15 @@
 				384B4E29261FC59400D4C5A5 /* BreedDetailViewSpec.swift */,
 			);
 			path = BreedsTests;
+			sourceTree = "<group>";
+		};
+		384B4E372620A3E200D4C5A5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				384B4E332620A2B300D4C5A5 /* ServiceProtocol.swift */,
+				384B4E382620A57000D4C5A5 /* ImageService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		F1A9D4898F81339BB3A9E097 /* Frameworks */ = {
@@ -453,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3744774F24DB969200D90286 /* Breed.swift in Sources */,
+				384B4E342620A2B300D4C5A5 /* ServiceProtocol.swift in Sources */,
 				37A84D7524E222620006AF73 /* UINavigationController+CustomAppearence.swift in Sources */,
 				373EA9DE24DCC29B00A2F236 /* Image.swift in Sources */,
 				37C2308F24E09F0C00D82388 /* UIImage+SetImage.swift in Sources */,
@@ -462,6 +477,7 @@
 				37A84D7024E213300006AF73 /* UIColor+Boilerplate.swift in Sources */,
 				37A84D6B24E20FE70006AF73 /* Colors.swift in Sources */,
 				37C2308824E09A4400D82388 /* BreedsCollectionViewController.swift in Sources */,
+				384B4E392620A57000D4C5A5 /* ImageService.swift in Sources */,
 				3748872924D75B52003A2F4C /* SceneDelegate.swift in Sources */,
 				37FE93A924E8754C0075F99E /* BreedDetailViewController.swift in Sources */,
 				37FE93AF24E896180075F99E /* NSMutableAttributedString+Boilerplate.swift in Sources */,
