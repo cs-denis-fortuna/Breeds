@@ -85,13 +85,9 @@ extension BreedsCollectionViewController {
 // MARK: - Navigation
 extension BreedsCollectionViewController {
     func showDetailForSelectedBreed(_ selectedImage: Image) {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: Self.self))
-        
-        guard let breedDetailViewController = storyboard.instantiateViewController(identifier: "BreedDetailViewController") as? BreedDetailViewController else { return }
-        breedDetailViewController.breed = selectedImage.breeds.first
-        breedDetailViewController.imageUrl = selectedImage.url
-        
-        show(breedDetailViewController, sender: self)
+        guard let selectedBreed = selectedImage.breeds.first else { return }
+        let breedDetailController = BreedDetailViewController(breed: selectedBreed, imageUrl: selectedImage.url)
+        show(breedDetailController, sender: self)
     }
     
     private func showEmptyBreedFeedback() {
