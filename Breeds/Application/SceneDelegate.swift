@@ -11,15 +11,13 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    private let initialCoordinator: BreedsCoordinator = BreedsCoordinator()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = scene as? UIWindowScene else { return }
         window = UIWindow(windowScene: windowScene)
         
-        let controller = BreedsCollectionViewController()
-        let navigation = UINavigationController(rootViewController: controller)
-        
-        window?.rootViewController = navigation
+        window?.rootViewController = initialCoordinator.start(with: .root)
         window?.backgroundColor = BackgroundColor.main
         window?.makeKeyAndVisible()
     }

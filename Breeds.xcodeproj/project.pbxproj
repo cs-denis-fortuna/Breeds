@@ -35,6 +35,9 @@
 		384B4E342620A2B300D4C5A5 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B4E332620A2B300D4C5A5 /* ServiceProtocol.swift */; };
 		384B4E392620A57000D4C5A5 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B4E382620A57000D4C5A5 /* ImageService.swift */; };
 		384B4E3D2620D47100D4C5A5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B4E3C2620D47100D4C5A5 /* NetworkManager.swift */; };
+		384B4E442620F53800D4C5A5 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B4E432620F53800D4C5A5 /* CoordinatorProtocol.swift */; };
+		384B4E4D2620F5F800D4C5A5 /* Coordinator+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B4E4C2620F5F800D4C5A5 /* Coordinator+Ext.swift */; };
+		384B4E552623ECAF00D4C5A5 /* BreedsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B4E542623ECAF00D4C5A5 /* BreedsCoordinator.swift */; };
 		9CAD976A9C216850ADEEAC9A /* Pods_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3AAEAAEF2625C26EC5DDF9C /* Pods_Breeds.framework */; };
 		E1753C4775685DBCE28AEFDD /* Pods_BreedsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665C4262D8A3C905403DE60D /* Pods_BreedsTests.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +85,9 @@
 		384B4E332620A2B300D4C5A5 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		384B4E382620A57000D4C5A5 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		384B4E3C2620D47100D4C5A5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		384B4E432620F53800D4C5A5 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		384B4E4C2620F5F800D4C5A5 /* Coordinator+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Ext.swift"; sourceTree = "<group>"; };
+		384B4E542623ECAF00D4C5A5 /* BreedsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsCoordinator.swift; sourceTree = "<group>"; };
 		59949F29E5B0C817D73C04E0 /* Pods-Breeds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeds.debug.xcconfig"; path = "Target Support Files/Pods-Breeds/Pods-Breeds.debug.xcconfig"; sourceTree = "<group>"; };
 		5B8B12FDF73FB65182CCEBFA /* Pods-BreedsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreedsTests.release.xcconfig"; path = "Target Support Files/Pods-BreedsTests/Pods-BreedsTests.release.xcconfig"; sourceTree = "<group>"; };
 		665C4262D8A3C905403DE60D /* Pods_BreedsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreedsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,15 +156,15 @@
 		3748872524D75B52003A2F4C /* Breeds */ = {
 			isa = PBXGroup;
 			children = (
+				3748873124D75B54003A2F4C /* LaunchScreen.storyboard */,
 				3748873424D75B54003A2F4C /* Info.plist */,
 				3744774824DB778200D90286 /* Application */,
-				37FE939D24E86FA30075F99E /* BreedDetail */,
-				37C2308524E099E800D82388 /* BreedsCollection */,
+				384B4E422620E45300D4C5A5 /* Breeds */,
 				373EA9DA24DCC1DB00A2F236 /* Model */,
-				3748873124D75B54003A2F4C /* LaunchScreen.storyboard */,
 				37A84D6824E20FBC0006AF73 /* Resources */,
 				37C2308D24E09E1100D82388 /* Utils */,
 				384B4E372620A3E200D4C5A5 /* Network */,
+				384B4E492620F5E700D4C5A5 /* Coordinator */,
 			);
 			path = Breeds;
 			sourceTree = "<group>";
@@ -178,7 +184,6 @@
 			children = (
 				37C2308724E09A4400D82388 /* BreedsCollectionViewController.swift */,
 				37C2308B24E09C5600D82388 /* BreedCollectionViewCell.swift */,
-				384B4D6F261CFE1300D4C5A5 /* ViewCodable.swift */,
 			);
 			path = BreedsCollection;
 			sourceTree = "<group>";
@@ -242,6 +247,26 @@
 				384B4E3C2620D47100D4C5A5 /* NetworkManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		384B4E422620E45300D4C5A5 /* Breeds */ = {
+			isa = PBXGroup;
+			children = (
+				37FE939D24E86FA30075F99E /* BreedDetail */,
+				37C2308524E099E800D82388 /* BreedsCollection */,
+				384B4E542623ECAF00D4C5A5 /* BreedsCoordinator.swift */,
+				384B4D6F261CFE1300D4C5A5 /* ViewCodable.swift */,
+			);
+			path = Breeds;
+			sourceTree = "<group>";
+		};
+		384B4E492620F5E700D4C5A5 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				384B4E432620F53800D4C5A5 /* CoordinatorProtocol.swift */,
+				384B4E4C2620F5F800D4C5A5 /* Coordinator+Ext.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		F1A9D4898F81339BB3A9E097 /* Frameworks */ = {
@@ -471,6 +496,7 @@
 			files = (
 				3744774F24DB969200D90286 /* Breed.swift in Sources */,
 				384B4E342620A2B300D4C5A5 /* ServiceProtocol.swift in Sources */,
+				384B4E442620F53800D4C5A5 /* CoordinatorProtocol.swift in Sources */,
 				37A84D7524E222620006AF73 /* UINavigationController+CustomAppearence.swift in Sources */,
 				373EA9DE24DCC29B00A2F236 /* Image.swift in Sources */,
 				37C2308F24E09F0C00D82388 /* UIImage+SetImage.swift in Sources */,
@@ -483,7 +509,9 @@
 				384B4E392620A57000D4C5A5 /* ImageService.swift in Sources */,
 				3748872924D75B52003A2F4C /* SceneDelegate.swift in Sources */,
 				37FE93A924E8754C0075F99E /* BreedDetailViewController.swift in Sources */,
+				384B4E552623ECAF00D4C5A5 /* BreedsCoordinator.swift in Sources */,
 				37FE93AF24E896180075F99E /* NSMutableAttributedString+Boilerplate.swift in Sources */,
+				384B4E4D2620F5F800D4C5A5 /* Coordinator+Ext.swift in Sources */,
 				37FE93A524E873E40075F99E /* BreedDetailView.swift in Sources */,
 				384B4D74261D695C00D4C5A5 /* Identifier.swift in Sources */,
 				384B4E3D2620D47100D4C5A5 /* NetworkManager.swift in Sources */,

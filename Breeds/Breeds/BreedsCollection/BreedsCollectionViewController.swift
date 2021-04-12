@@ -30,6 +30,9 @@ class BreedsCollectionViewController: UIViewController {
         return collection
     }()
     
+    // MARK: Navigation
+    weak var coordinator: BreedsCoordinator?
+    
     // MARK: Network
     private let networkManager: NetworkManager = NetworkManager()
 
@@ -72,9 +75,7 @@ extension BreedsCollectionViewController {
 // MARK: - Navigation
 extension BreedsCollectionViewController {
     func showDetailForSelectedBreed(_ selectedImage: Image) {
-        guard let selectedBreed = selectedImage.breeds.first else { return }
-        let breedDetailController = BreedDetailViewController(breed: selectedBreed, imageUrl: selectedImage.url)
-        show(breedDetailController, sender: self)
+        coordinator?.didSelectImage(selectedImage)
     }
     
     private func showEmptyBreedFeedback() {
